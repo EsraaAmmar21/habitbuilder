@@ -1,0 +1,11 @@
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\bin\Debug\net8.0\HabitBuilder.Domain.deps.json
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\bin\Debug\net8.0\HabitBuilder.Domain.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\bin\Debug\net8.0\HabitBuilder.Domain.pdb
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.AssemblyInfoInputs.cache
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.AssemblyInfo.cs
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\refint\HabitBuilder.Domain.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\HabitBuilder.Domain.pdb
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Domain\obj\Debug\net8.0\ref\HabitBuilder.Domain.dll

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Challenges - Habit Builder{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h2>Community Challenges</h2>
+    </div>
+    <div class="col text-end">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newChallengeModal">
+            Create Challenge
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    {% for challenge in challenges %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ challenge.name }}</h5>
+                <p class="card-text">{{ challenge.description }}</p>
+                <p class="card-text">
+                    <small class="text-muted">
+                        Start: {{ challenge.start_date.strftime('%Y-%m-%d') }}<br>
+                        End: {{ challenge.end_date.strftime('%Y-%m-%d') }}<br>
+                        Participants: {{ challenge.participants|length }}
+                    </small>
+                </p>
+                {% if challenge.id not in user_challenges %}
+                <form method="POST" action="{{ url_for('join_challenge', challenge_id=challenge.id) }}">
+                    <button type="submit" class="btn btn-primary">Join Challenge</button>
+                </form>
+                {% else %}
+                <button class="btn btn-secondary" disabled>Joined</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- New Challenge Modal -->
+<div class="modal fade" id="newChallengeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Challenge</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ url_for('create_challenge') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Challenge Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="start_date" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="start_date" name="start_date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="end_date" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="end_date" name="end_date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Challenge</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

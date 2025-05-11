@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Habits - Habit Builder{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h2>Your Habits</h2>
+    </div>
+    <div class="col text-end">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newHabitModal">
+            Create New Habit
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    {% for habit in habits %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ habit.name }}</h5>
+                <p class="card-text">{{ habit.description }}</p>
+                <p class="card-text">
+                    <small class="text-muted">
+                        Frequency: {{ habit.frequency }}<br>
+                        Streak: {{ habit.streak }} days
+                    </small>
+                </p>
+                <div class="btn-group">
+                    <form method="POST" action="{{ url_for('complete_habit', habit_id=habit.id) }}" class="d-inline">
+                        <button type="submit" class="btn btn-success">Complete</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('delete_habit', habit_id=habit.id) }}" class="d-inline">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this habit?')">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- New Habit Modal -->
+<div class="modal fade" id="newHabitModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Habit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ url_for('create_habit') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Habit Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="frequency" class="form-label">Frequency</label>
+                        <select class="form-control" id="frequency" name="frequency" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reminder_time" class="form-label">Reminder Time (optional)</label>
+                        <input type="time" class="form-control" id="reminder_time" name="reminder_time">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Habit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

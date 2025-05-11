@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Habit Builder{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h2>Your Habits</h2>
+        <div class="row">
+            {% for habit in habits %}
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ habit.name }}</h5>
+                        <p class="card-text">{{ habit.description }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Streak: {{ habit.streak }} days
+                                {% if habit.last_completed %}
+                                <br>Last completed: {{ habit.last_completed }}
+                                {% endif %}
+                            </small>
+                        </p>
+                        <form method="POST" action="{{ url_for('complete_habit', habit_id=habit.id) }}" class="d-inline">
+                            <button type="submit" class="btn btn-success">Complete Today</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <h2>Active Challenges</h2>
+        {% for challenge in challenges %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ challenge.name }}</h5>
+                <p class="card-text">{{ challenge.description }}</p>
+                <p class="card-text">
+                    <small class="text-muted">
+                        Ends: {{ challenge.end_date }}
+                    </small>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

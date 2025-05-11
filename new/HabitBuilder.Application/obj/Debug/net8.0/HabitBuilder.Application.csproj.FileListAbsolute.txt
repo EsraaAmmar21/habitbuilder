@@ -1,0 +1,15 @@
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\bin\Debug\net8.0\HabitBuilder.Application.deps.json
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\bin\Debug\net8.0\HabitBuilder.Application.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\bin\Debug\net8.0\HabitBuilder.Application.pdb
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\bin\Debug\net8.0\HabitBuilder.Domain.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\bin\Debug\net8.0\HabitBuilder.Domain.pdb
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.csproj.AssemblyReference.cache
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.AssemblyInfoInputs.cache
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.AssemblyInfo.cs
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.csproj.CoreCompileInputs.cache
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBui.48BBFE05.Up2Date
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\refint\HabitBuilder.Application.dll
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\HabitBuilder.Application.pdb
+C:\Users\Madiha\Level_Four\Sec_Term\courses\Cloud\cloud_project\HabitBuilder.Application\obj\Debug\net8.0\ref\HabitBuilder.Application.dll
